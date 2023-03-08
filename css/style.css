@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+        url('../fonts/MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*-------------------NULL------------------------------------*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+body,
+html {
+    height: 100%;
+    font-size: 24px;
+    color: #2C2C2C;
+    font-family: "Roboto", sans-serif;
+}
+[class*="__container"]{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/*----------------------HEADER------------------------------------------*/
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 63px;
+    margin-bottom: 40px;
+}
+.header__logo{
+    display: inline-block;
+}
+.logo {
+    font-size: 80px;
+    line-height: 117.5%;
+    color: #000;
+}
+.logo-blue {
+    color: #4BCAFF;
+}
+.header__change-theme {
+    padding: 15px;
+    background-color: #35444F;
+    color: #ccc;
+}
+.header__change-theme:hover {
+    cursor: pointer;
+    background-color: #222F3A;
+    transition: all 0.5s ease 0s;
+}
+/*----------------------NAVBAR------------------------------------------*/
+.header__menu {
+    background-color: #35444F;
+    margin-bottom: 48px;
+}
+.menu__list {
+    display: flex;
+    justify-content: center;
+}
+.menu__item {
+    border-left: 1px solid #fff;
+
+}
+.menu__item:last-child { 
+    border-right: 1px solid #fff;
+}
+.menu__item:hover {
+    background-color: #222F3A;
+    transition: all 1s ease 0s;
+}
+.menu__item a {
+    color: #fff;
+    padding: 24px 30px 18px;
+}
+/*-----------------------MAIN------------------------------------------*/
+.page {
+    flex: 1 1 auto;
+}
+.page__container {
+    display: flex;
+    justify-content: space-between;
+}
+/*-----------------------SIDEBAR------------------------------------------*/
+.sidebar__menu {
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0.0001);
+    min-width: 344px;
+}
+.sidebar-menu__list {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-menu__item a {
+    color: #485863;
+    padding: 26px 44px;
+    font-size: 27px;
+}
+.sidebar-menu__item a:hover {
+    color: #000000;
+    background-color: #DBDBDB;
+    transition: all 0.8s ease 0.1s;
+    padding-left: 70px;
+    font-family: "Myriad Pro";
+}
+/*-----------------------MAIN-CONTENT------------------------------------------*/
+.page__content {
+    max-width: 885px;
+}
+.content__image {
+    background: rgba(0, 0, 0, 0.0001);
+    border: 1px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 529px;
+    margin-bottom: 37px;
+}
+.content__image:hover img {
+    transform: scale(1.1);
+    transition: all 0.7s ease 0.1s;
+}
+.content__text {
+    font-size: 18px;
+    line-height: 133%;
+    color: #2C2C2C;
+    margin-bottom: 54px;
+}
+.content__paragraph:not(:last-child) {
+    margin-bottom: 34px;
+}
+/*----------------------FOOTER------------------------------------------*/
+.footer__container {
+    background-color: rgba(99, 105, 110, 0.48);
+    display: flex;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+}
+.footer-menu {
+    flex: 1 1 auto;
+}
+.footer-menu__list {
+    display: flex;
+    gap: 40px;
+}
+.footer-menu__item a {
+    color: #0C1927;
+    font-size: 28px;
+}
+.footer-menu__item a:hover {
+    color: #3181A6;
+    transition: all 0.6s ease 0s;
+    border-bottom: 1px solid #3181A6;
+}
+
+
+html.dark body {
+    color: #ccc;
+    background-color: #333;
+}
+html.light body {
+    color: #fff;
+    background-color: #ccc;
+}
+html.dark .logo {
+    color: #ccc;
+}
+html.dark .sidebar-menu__item a {
+    color: #ccc;
+}
+html.dark .sidebar-menu__item a:hover {
+    background-color: #252525;
+}
+html.dark .content__text {
+    color: #ccc;
+}
+html.dark .footer-menu__item a {
+    color: #ccc;
+}
+html.dark .footer-menu__item a:hover {
+    color: #3181A6;
+}
+html.dark .footer__container {
+    background-color: #35444F;
+}
